@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Mina');
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+
+}
+
+
+#particle-canvas {
+  width: 100%;
+  height: 100%;
+
+}
+
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.spacer {
+  font-size: 3vh;
+
+   height: 5vh ;
+}
+
+h1 {
+  color: #ff5722;
+  text-align: center;
+  font-size: 10vh;
+}
+
+
+
+.block {
+   position: relative ;
+   width:90vw ;
+   border-radius: 1vh;
+   margin-left: auto ;
+   margin-right: auto ;
+   text-align: center ;
+   font-size: 3vh;
+font-family: 'Mina', sans-serif;
+}
+
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.subscribe {
+   background-color: #eee;
+   color: black;
+   width: 90vw ;
+   border-radius: 1vh;
+   font-size: 3vh;
+font-family: 'Mina', sans-serif;
+   text-align: left ;
+   margin-left: auto ;
+   margin-right: auto ;
+   margin-bottom: 1vh ;
+   padding-top: 1vh ;
+   padding-bottom: 1vh ;
+   padding-left: 1vw;
+
+   display: block ;
+
+}
+
+.settings {
+   background-color: #4caf50;
+   width: 90vw;
+   border-radius: 1vh;
+   border: 0;
+   outline: none;
+   font-size: 3vh;
+font-family: 'Mina', sans-serif;
+   text-align: left ;
+   margin-left: auto ;
+   margin-right: auto ;
+   margin-bottom: 1vh ;
+   padding-top: 1vh ;
+   padding-bottom: 1vh ;
+   padding-left: 1vw;
+   display: block ;
+   color: #ffffff ;
+
+}
+
+input {
+  border: 0;
+  outline: none;
+  background-color: #43a047;
+  color: white;
+  padding-left: 1vw;
+  font-size: 3vh;
+  height: 6vh;
+  width: 70vw;
+  font-family: 'Mina', sans-serif;
+font-family: 'Mina', sans-serif;
+  border-radius: 1vh;
+
+
+}
