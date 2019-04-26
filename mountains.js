@@ -18,6 +18,7 @@ ctx.lineTo(x,y);
 
 }
 
+
 function coinFlip() {
     return Math.floor(Math.random() * 2);
 }
@@ -59,7 +60,7 @@ ctx.canvas.width  = ww;
 ctx.canvas.height = wh;
 console.log('windowsize',ww,wh);
 var my_gradient = ctx.createLinearGradient(0, 0, 0, wh/2);
-my_gradient.addColorStop(0, "rgba(25, 150, 200, 1)");
+my_gradient.addColorStop(0, "rgba(200, 100, 50, 1)");
 my_gradient.addColorStop(1, "rgba(250, 200, 100, 1)");
 ctx.fillStyle = my_gradient;
 ctx.fillRect(0, 0, ww, wh);
@@ -72,17 +73,17 @@ function render() {
 
 y = wh/3;
 size = 15
-ctx.fillStyle = "rgba(25, 150, 200, 1)";
+ctx.fillStyle = "rgba(200, 50, 50, 1)";
 draw();
 
 size = 30
 y = wh/2;
-ctx.fillStyle = "rgba(25, 100, 150, 1)";
+ctx.fillStyle = "rgba(140, 20, 40, 1)";
 draw();
 
 size = 40
 y = wh-(wh/3);
-ctx.fillStyle = "rgba(25, 50, 100, 1)";
+ctx.fillStyle = "rgba(80, 10, 40, 1)";
 draw();
 
 function moon() {
