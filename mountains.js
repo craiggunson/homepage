@@ -46,11 +46,20 @@ function draw() {
 
 }
 
-
+ window.onorientationchange = function() {
+        var orientation = window.orientation;
+            switch(orientation) {
+                case 0:
+                case 90:
+                case -90: window.location.reload();
+                break; }
+    };
 
 
 function init() {
   window.addEventListener('resize', init, false);
+  window.addEventListener("orientationchange", function() {
+  window.location.reload();});
 
 canvas = document.getElementById('canvas');
 ctx = canvas.getContext('2d');
