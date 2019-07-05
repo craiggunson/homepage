@@ -21,7 +21,7 @@
 }
 
  .icon-block{
-     padding:0 15px
+     padding:0 2vw
 }
  .icon-block .material-icons{
     font-size:inherit
@@ -91,7 +91,8 @@
 }
  html{
      -webkit-box-sizing:border-box;
-     box-sizing:border-box
+     box-sizing:border-box;
+     font-size: 2vh;
 }
  *, *:before, *:after{
      -webkit-box-sizing:inherit;
@@ -116,13 +117,13 @@
      font-size:2rem
 }
  .page-footer{
-     padding-top:20px;
+     padding-top:1vh;
      color:#fff;
      background-color:rgba(0,0,0,.2)
 }
  .page-footer .footer-copyright{
      overflow:hidden;
-     min-height:50px;
+     min-height:5vh;
      display:-webkit-box;
      display:-webkit-flex;
      display:-ms-flexbox;
@@ -131,7 +132,7 @@
      -webkit-align-items:center;
      -ms-flex-align:center;
      align-items:center;
-     padding:10px 0px;
+     padding:1vw 1vh;
      color:rgba(255,255,255,0.8);
      background-color:rgba(0,0,0,0.2)
 }
@@ -146,8 +147,8 @@
 }
  .container{
      margin:0 auto;
-     max-width:1280px;
-     width:90%
+     max-width:100vw;
+     width:95%
 }
  @media only screen and (min-width:601px){
      .container{
@@ -173,7 +174,7 @@
  .row{
      margin-left:auto;
      margin-right:auto;
-     margin-bottom:20px
+     margin-bottom:1vh;
 }
  .row:after{
      content:"";
@@ -185,7 +186,7 @@
      -webkit-box-sizing:border-box;
      box-sizing:border-box;
      padding:0 0.75rem;
-     min-height:1px
+     min-height:1vh
 }
  .row .col.s12{
      width:100%;
@@ -224,21 +225,7 @@
      font-weight:normal;
      color:rgba(0,0,0,0.87)
 }
- @media only screen and (min-width:0){
-     html{
-         font-size:15px
-    }
-}
- @media only screen and (min-width:992px){
-     html{
-         font-size:15px
-    }
-}
- @media only screen and (min-width:1200px){
-     html{
-         font-size:15px
-    }
-}
+
  h2, h5{
      font-weight:400;
      line-height:1.1;
@@ -248,15 +235,16 @@
      font-weight:400;
      font-size:3vh;
      line-height:1;
-     color:rgba(255,255,255,.7)
+     color:rgba(255,255,255,.9)
 }
  h2{
-     font-size:3.56rem;
+     font-size:4vh;
      line-height:110%;
      margin:1.78rem 0 1.424rem 0
 }
  h5{
-     font-size:1.64rem;
+    font-weight:800;
+     font-size:2vh;
      line-height:110%;
      margin:0.82rem 0 0.656rem 0
 }
