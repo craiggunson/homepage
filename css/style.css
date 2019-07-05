@@ -89,7 +89,7 @@
  html{
      -webkit-box-sizing:border-box;
      box-sizing:border-box;
-     font-size: 2em;
+     font-size: 3vh;
 }
  *, *:before, *:after{
      -webkit-box-sizing:inherit;
@@ -188,6 +188,7 @@ i { letter-spacing: 1vw; }
     .row .col.m4{
          width:33.3333333333%;
          margin-left:auto;
+         font-size: 2vw;
          left:auto;
          right:auto
     }
@@ -210,18 +211,16 @@ i { letter-spacing: 1vw; }
 }
  h3{
      font-weight:400;
-     font-size:1em;
      line-height:1;
      color:rgba(255,255,255,.9)
 }
  h2{
-     font-size:2em;
      line-height:110%;
      margin:1.78rem 0 1.424rem 0
 }
  h5{
-    font-weight:800;
-     font-size: 1em;
+     font-weight:800;
+
      line-height:110%;
      margin:0.82rem 0 0.656rem 0
 }
