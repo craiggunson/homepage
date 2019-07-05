@@ -36,7 +36,7 @@
      line-height:1.1;
      padding:0;
      margin:0;
-     font-size:10vh
+     font-size:3em
 }
 
  .background{
@@ -85,14 +85,11 @@
      background-color:transparent
 }
 
- h1{
-     font-size:2em;
-     margin:0.67em 0
-}
+
  html{
      -webkit-box-sizing:border-box;
      box-sizing:border-box;
-     font-size: 2vh;
+     font-size: 2em;
 }
  *, *:before, *:after{
      -webkit-box-sizing:inherit;
@@ -203,7 +200,7 @@ i { letter-spacing: 1vw; }
      line-height:1.5;
      font-family:'Lato',sans-serif;
      font-weight:normal;
-     color:rgba(0,0,0,0.87)
+     color:rgba(255,255,255,.9)
 }
 
  h2, h5{
@@ -213,18 +210,18 @@ i { letter-spacing: 1vw; }
 }
  h3{
      font-weight:400;
-     font-size:3vh;
+     font-size:1em;
      line-height:1;
      color:rgba(255,255,255,.9)
 }
  h2{
-     font-size:4vh;
+     font-size:2em;
      line-height:110%;
      margin:1.78rem 0 1.424rem 0
 }
  h5{
     font-weight:800;
-     font-size:2vh;
+     font-size: 1em;
      line-height:110%;
      margin:0.82rem 0 0.656rem 0
 }
