@@ -11,13 +11,29 @@ var size;
 var x;
 
 function tree(x,y,size) {
-ctx.lineTo(x-(size/2),y+(size));
-ctx.lineTo(x,y-size/2);
-ctx.lineTo(x+(size/2),y+(size));
-ctx.lineTo(x,y);
-
+  ctx.lineTo(x,y)
+  ctx.lineTo(x-(size/2),y);
+  ctx.lineTo(x,y-size/2);
+  ctx.lineTo(x+(size/2),y);
+  ctx.lineTo(x,y);
+  ctx.translate(0,-size/3.3)
+  ctx.lineTo(x,y)
+  ctx.lineTo(x-(size/2.5),y);
+  ctx.lineTo(x,y-size/2.5);
+  ctx.lineTo(x+(size/2.5),y);
+  ctx.lineTo(x,y);
+  ctx.translate(0,-size/3.3)
+  ctx.lineTo(x,y)
+  ctx.lineTo(x-(size/3),y);
+  ctx.lineTo(x,y-size/3);
+  ctx.lineTo(x+(size/3),y);
+  ctx.lineTo(x,y);
+  ctx.translate(0,(size/3.3+size/3.3));
+  ctx.lineTo(x,y);
+  //ctx.lineTo(100,100);
+  
+  ctx.fill();
 }
-
 
 function coinFlip() {
     return Math.floor(Math.random() * 2);
@@ -81,16 +97,16 @@ init();
 function render() {
 
 y = wh/3;
-size = 15
+size = 20
 ctx.fillStyle = "rgba(200, 50, 50, 1)";
 draw();
 
-size = 30
+size = 35
 y = wh/2;
 ctx.fillStyle = "rgba(140, 20, 40, 1)";
 draw();
 
-size = 40
+size = 50
 y = wh-(wh/3);
 ctx.fillStyle = "rgba(80, 10, 40, 1)";
 draw();
