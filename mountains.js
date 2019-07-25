@@ -11,24 +11,25 @@ var size;
 var x;
 
 function tree(x,y,size) {
+  ctx.translate(0,+size/4);
   ctx.lineTo(x,y)
   ctx.lineTo(x-(size/2),y);
   ctx.lineTo(x,y-size/2);
   ctx.lineTo(x+(size/2),y);
   ctx.lineTo(x,y);
-  ctx.translate(0,-size/3.3)
+  ctx.translate(0,-size/4)
   ctx.lineTo(x,y)
   ctx.lineTo(x-(size/2.5),y);
   ctx.lineTo(x,y-size/2.5);
   ctx.lineTo(x+(size/2.5),y);
   ctx.lineTo(x,y);
-  ctx.translate(0,-size/3.3)
+  ctx.translate(0,-size/4)
   ctx.lineTo(x,y)
   ctx.lineTo(x-(size/3),y);
   ctx.lineTo(x,y-size/3);
   ctx.lineTo(x+(size/3),y);
   ctx.lineTo(x,y);
-  ctx.translate(0,(size/3.3+size/3.3));
+  ctx.translate(0,(size/4+size/4-size/4));
   ctx.lineTo(x,y);
   //ctx.lineTo(100,100);
   
@@ -54,7 +55,7 @@ function draw() {
       if (y < maxy) {maxy = y;}
       ctx.lineTo(x,y);
       choose = coinFlip();
-        if (choose == 0) {tree(x,y,size);}
+       // if (choose == 0) {tree(x,y,size);}
       //console.log('x',x,'y',y,choose,maxy);
     }
     ctx.lineTo(ww,wh);
@@ -112,11 +113,35 @@ ctx.fillStyle = "rgba(80, 10, 40, 1)";
 draw();
 
 function moon() {
-var moon = ww*Math.random()
-ctx.beginPath();
-ctx.arc(moon, maxy-wh/40, wh/40, 0, 2 * Math.PI);
-ctx.fillStyle = "rgba(255,255,255,.2)";
-ctx.fill();
+var moonplace = ww*Math.random()
+var moonheight = maxy-wh/40
+
+for (var ang = 0; ang <= 1.9; ang=ang+.2) {
+  ctx.beginPath();
+  ctx.lineTo(moonplace, moonheight);
+  ctx.arc(moonplace, moonheight, 9000, ang * Math.PI, (ang+.1) * Math.PI);
+  ctx.lineTo(moonplace, moonheight);
+  ctx.fillStyle = "rgba(255,255,255,.05)";
+  ctx.fill();
+  ctx.closePath();
+
+  }
+
+  for (var ang = .1; ang <= 2; ang=ang+.2) {
+    ctx.beginPath();
+    ctx.lineTo(moonplace, moonheight);
+    ctx.arc(moonplace, moonheight, wh/20, ang * Math.PI, (ang+.1) * Math.PI);
+    ctx.lineTo(moonplace, moonheight);
+    ctx.fillStyle = "rgba(255,255,255,.05)";
+    ctx.fill();
+    ctx.closePath();
+  }
+
+  ctx.beginPath();
+  ctx.arc(moonplace, moonheight, wh/30, 0, 2 * Math.PI);
+  ctx.fillStyle = "rgba(255,255,255,.1)";
+  ctx.fill();
+  ctx.closePath();
 }
 
 moon();
