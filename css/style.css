@@ -214,4 +214,6 @@ i { letter-spacing: 1vw; }
      font-weight:300;
      font-size: 60%;
      text-align: right;
+position: static;
+
 }
