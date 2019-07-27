@@ -90,7 +90,6 @@
      list-style-type:none
 }
  a{
-     color:#039be5;
      text-decoration:none;
      -webkit-tap-highlight-color:transparent
 }
@@ -102,7 +101,6 @@
 }
  .page-footer{
      padding-top:1vh;
-     color:rgba(255,255,255,.6);
      background-color:rgba(0,0,0,.2)
 }
  .page-footer .footer-copyright{
@@ -117,7 +115,6 @@
      -ms-flex-align:center;
      align-items:center;
      padding:1vw 1vh;
-     color:rgba(255,255,255,0.8);
      background-color:rgba(0,0,0,0.2)
 }
  .center{
@@ -212,8 +209,9 @@ i { letter-spacing: 1vw; }
 
 .footer-copyright{
      font-weight:300;
-     font-size: 60%;
+     font-size: 70%;
+     height: 3em;
      text-align: right;
-position: static;
+     position: static;
 
 }
