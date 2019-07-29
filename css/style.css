@@ -73,7 +73,9 @@
      display:block
 }
  a{
-     background-color:transparent
+     background-color:transparent;
+     color:rgba(255,255,255,.6)
+
 }
 
 
@@ -188,7 +190,7 @@ margin-bottom: 1vh; }
 }
  h5{
      font-weight:800;
-     color:rgba(255,255,255,1);
+     color:rgba(255,255,255,.9);
      line-height:110%;
      margin:0.82rem 0 0.656rem 0
 }
@@ -198,8 +200,5 @@ margin-bottom: 1vh; }
 
 .footer-copyright{
      font-weight:300;
-     font-size: 70%;
      text-align: right;
-     display: block;
-
 }
