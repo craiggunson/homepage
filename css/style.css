@@ -17,7 +17,7 @@
      width:100vw;
      margin:0;
      padding:0;
-     overflow:auto;
+     overflow:hidden;
      line-height:1.5;
      font-family:'Lato',sans-serif;
      font-weight:normal;
@@ -102,7 +102,7 @@
 }
  .page-footer{
      padding-top:1vh;
-     background-color:rgba(0,0,0,.2)
+     background-color:rgba(0,0,0,.4)
 }
  .page-footer .footer-copyright{
      overflow:hidden;
@@ -201,5 +201,5 @@ margin-bottom: 1vh; }
 
 .footer-copyright{
      font-weight:300;
-     text-align: right;
+     text-align: left;
 }
