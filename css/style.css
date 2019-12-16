@@ -70,7 +70,8 @@
      flex:1 0 auto
 }
  footer, main{
-     display:block
+     display:block;
+     position: static
 }
  a{
      background-color:transparent;
