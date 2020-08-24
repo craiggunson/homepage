@@ -1,10 +1,9 @@
-name: static-website-dev
+name: static-website
 
 on:
   push:
-    branches:
-      - '*' 
-      - '!master'
+    branches-ignore:
+      - master
 
 jobs:
   deploy:
