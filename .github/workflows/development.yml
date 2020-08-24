@@ -3,7 +3,7 @@ name: static-website-dev
 on:
   push:
     branches: 
-    - '!master'
+    - !master
     - '*'
 
 jobs:
