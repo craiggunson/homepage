@@ -1,8 +1,9 @@
-name: static-website
+name: static-website-dev
 
 on:
   push:
-    branches: 
+    branches:
+      - '*' 
       - '!master'
 
 jobs:
