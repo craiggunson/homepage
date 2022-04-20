@@ -23,4 +23,6 @@ jobs:
           
     - name: Copy to craiggunson.com bucket.
       run: |
-        aws s3 sync . s3://craiggunson.com --acl public-read --cache-control "max-age=60"  --delete
+        aws s3 sync . s3://craiggunson.com --acl public-read --cache-control "max-age=60"  --delete \
+        --exclude '.git*' \
+        --exclude '.github*'
