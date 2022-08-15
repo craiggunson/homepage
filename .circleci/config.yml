@@ -22,7 +22,7 @@ jobs:
       - gcp-cli/install
       - gcp-cli/initialize:
           gcloud-service-key: GCLOUD_SERVICE_KEY
-          #google-compute-region: <<parameters.google-compute-region>>
+          google-compute-region: AUSTRALIA_REGION
           #google-compute-zone: <<parameters.google-compute-zone>>
           google-project-id: GOOGLE_PROJECT_ID
 
