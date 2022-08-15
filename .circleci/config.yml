@@ -20,6 +20,8 @@ jobs:
     steps:
       - checkout
       - gcp-cli/install
+      - gcp-cli/initialize:
+          google-project-id: homepage-dev-359500
       - run: |
           echo hello
           gcloud projects list
