@@ -20,7 +20,12 @@ jobs:
     steps:
       - checkout
       - gcp-cli/install
-      - gcp-cli/initialize
+      - gcp-cli/initialize:
+          gcloud-service-key: <<parameters.gcloud-service-key>>
+          google-compute-region: <<parameters.google-compute-region>>
+          google-compute-zone: <<parameters.google-compute-zone>>
+          google-project-id: <<parameters.google-project-id>>
+
       - run: |
           echo hello
           gcloud projects list
