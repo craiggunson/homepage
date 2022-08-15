@@ -19,9 +19,6 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - gcp-cli/install_and_initialize_cli:
-          context: myContext
-          executor: gcp-cli/default
       - run: |
           echo hello1
           echo hello2
@@ -31,5 +28,10 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
+      - gcp-cli/install_and_initialize_cli:
+          context: myContext
+          executor: gcp-cli/default
+      - steps:
+          run: gcloud projects list
       - say-hello
 
