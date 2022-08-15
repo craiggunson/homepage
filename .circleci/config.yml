@@ -21,10 +21,10 @@ jobs:
       - checkout
       - gcp-cli/install
       - gcp-cli/initialize:
-          gcloud-service-key: <<parameters.gcloud-service-key>>
-          google-compute-region: <<parameters.google-compute-region>>
-          google-compute-zone: <<parameters.google-compute-zone>>
-          google-project-id: <<parameters.google-project-id>>
+          gcloud-service-key: GCLOUD_SERVICE_KEY
+          #google-compute-region: <<parameters.google-compute-region>>
+          #google-compute-zone: <<parameters.google-compute-zone>>
+          google-project-id: GOOGLE_PROJECT_ID
 
       - run: |
           echo hello
