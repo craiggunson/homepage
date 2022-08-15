@@ -21,8 +21,8 @@ jobs:
       - checkout
       - gcp-cli/install
       - run: |
-          echo hello1
-          echo hello2
+          echo hello
+          gcloud projects list
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
