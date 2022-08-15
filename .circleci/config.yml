@@ -22,9 +22,27 @@ jobs:
           echo hello
           gcloud projects list
 
+  production:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - gcp-cli/install
+
+
+      - run: |
+          echo production
+
 workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      
+      - production
+      - deploy:
+          requires:
+            - say-hello
+          filters:
+            branches:
+              only:
+                - master      
 
