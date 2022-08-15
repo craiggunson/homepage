@@ -10,7 +10,7 @@ orbs:
 
 
 jobs:
-  gcp-cli/say-hello:
+  say-hello:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
@@ -31,5 +31,7 @@ workflows:
       - gcp-cli/install_and_initialize_cli:
           context: myContext
           executor: gcp-cli/default
-      - gcp-cli/say-hello
+          run: | 
+            echo bla
+      - say-hello
 
