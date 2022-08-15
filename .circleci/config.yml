@@ -37,8 +37,7 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      - production
-      - deploy:
+      - production:
           requires:
             - say-hello
           filters:
