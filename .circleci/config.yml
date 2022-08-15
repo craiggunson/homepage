@@ -27,8 +27,6 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - gcp-cli/install
-
 
       - run: |
           echo production
