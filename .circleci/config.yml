@@ -19,10 +19,9 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - gcp-cli/default:
       - run: |
-          echo hello1
-          echo hello2
+        echo hello1
+        echo hello2
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
