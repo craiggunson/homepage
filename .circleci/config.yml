@@ -24,7 +24,7 @@ jobs:
             gcloud components install kubectl --quiet
             gcloud components install kustomize --quiet
             gcloud components install gke-gcloud-auth-plugin --quiet
-            kubectl version
+            kubectl config view
             gcloud compute regions list
 
   production:
