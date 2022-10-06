@@ -21,9 +21,7 @@ jobs:
       - run:
           name: configure kubectl
           command: |
-            gcloud components install kubectl --quiet
-            gcloud components install kustomize --quiet
-            gcloud components install gke-gcloud-auth-plugin --quiet
+            gcloud components install kubectl kustomize gke-gcloud-auth-plugin --quiet
             kubectl version --client
             gcloud version
 
