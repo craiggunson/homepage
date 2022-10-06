@@ -6,7 +6,7 @@ orbs:
   gcp-cli: circleci/gcp-cli@2.4.1
 
 jobs:
-  say-hello:
+  avocado:
     docker:
       - image: cimg/base:stable
     steps:
@@ -39,12 +39,12 @@ jobs:
             echo production
 
 workflows:
-  say-hello-workflow:
+  avocado-workflow:
     jobs:
-      - say-hello
+      - avocado
       - production:
           requires:
-            - say-hello
+            - avocado
           filters:
             branches:
               only:
