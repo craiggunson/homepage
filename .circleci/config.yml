@@ -6,9 +6,9 @@ orbs:
   gcp-cli: circleci/gcp-cli@2.4.1
 
 jobs:
-  say-hello:
+  avocado:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/node:18.7.0
     steps:
       - checkout
       - gcp-cli/install
@@ -18,9 +18,14 @@ jobs:
           #google-compute-zone: <<parameters.google-compute-zone>>
           google-project-id: GOOGLE_PROJECT_ID
 
-      - run: |
-          echo hello
-          gcloud projects list
+      - run:
+          name: configure kubectl
+          command: |
+            gcloud components install kubectl kustomize gke-gcloud-auth-plugin --quiet
+            kubectl version --client
+            gcloud version
+            node --version
+            npm --version
 
   production:
     docker:
@@ -28,16 +33,18 @@ jobs:
     steps:
       - checkout
 
-      - run: |
-          echo production
+      - run:
+          name: production deploy
+          command: |
+            echo production
 
 workflows:
-  say-hello-workflow:
+  avocado-workflow:
     jobs:
-      - say-hello
+      - avocado
       - production:
           requires:
-            - say-hello
+            - avocado
           filters:
             branches:
               only:

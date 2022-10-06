@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "testcafe": "^2.0.0"
+  },
+  "name": "homepage",
+  "description": "Just the homepage for yours truly, where you can see some science experiments, and shared learning.",
+  "version": "1.0.0",
+  "main": "mountains.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "testcafe chrome ./test/test1.js",
+    "headless" : "testcafe 'chrome:headless' ./test/test1.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craiggunson/homepage.git"
+  },
+  "author": "Craig Gunson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/craiggunson/homepage/issues"
+  },
+  "homepage": "https://hello.craiggunson.com"
+}
