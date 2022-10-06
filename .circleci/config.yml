@@ -21,6 +21,9 @@ jobs:
       - run: |
           echo hello
           gcloud projects list
+          gcloud components instal kubectl --quiet
+          gcloud components install kustomize --quiet
+          gcloud components install gke-gcloud-auth-plugin --quiet
           kubectl version
 
   production:
