@@ -18,13 +18,15 @@ jobs:
           #google-compute-zone: <<parameters.google-compute-zone>>
           google-project-id: GOOGLE_PROJECT_ID
 
-      - run: |
-          echo hello
-          gcloud projects list
-          gcloud components install kubectl --quiet
-          gcloud components install kustomize --quiet
-          gcloud components install gke-gcloud-auth-plugin --quiet
-          kubectl version
+      - run:
+          name: configure kubectl
+          command: |
+            echo hello
+            gcloud projects list
+            gcloud components install kubectl --quiet
+            gcloud components install kustomize --quiet
+            gcloud components install gke-gcloud-auth-plugin --quiet
+            kubectl version
 
   production:
     docker:
