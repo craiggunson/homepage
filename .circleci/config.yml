@@ -17,13 +17,11 @@ jobs:
       - run:
           name: check python
           command: |
-            pyenv versions
-            pyenv global 2.7.18
+            python3 --version
             which python3
-            which python
-            export CLOUDSDK_PYTHON=/opt/circleci/.pyenv/shims/python
-            #pyenv install 3.9.9
-            #pyenv global 3.9.9
+            export CLOUDSDK_PYTHON=/opt/circleci/.pyenv/shims/python3
+            pyenv install 3.9.9
+            pyenv global 3.9.9
 
 
       - checkout
