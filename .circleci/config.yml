@@ -19,7 +19,8 @@ jobs:
           command: |
             pyenv versions
             pyenv global 2.7.18
-            #which python3
+            which python3
+            which python
             #export CLOUDSDK_PYTHON=/opt/circleci/.pyenv/shims/python3
             #pyenv install 3.9.9
             #pyenv global 3.9.9
