@@ -27,7 +27,9 @@ jobs:
 
 
       - checkout
-      - gcp-cli/install
+      - gcp-cli/install:
+          environment: 
+            CLOUDSDK_PYTHON: /opt/circleci/.pyenv/shims/python
       - gcp-cli/initialize:
           gcloud-service-key: GCLOUD_SERVICE_KEY
           google-compute-region: AUSTRALIA_REGION
