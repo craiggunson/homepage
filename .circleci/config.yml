@@ -14,22 +14,7 @@ jobs:
     #docker:
     #  - image: cimg/node:18.7.0
     steps:
-      - run:
-          name: check python
-          command: |
-            #python3 --version
-            #which python3
-            #export CLOUDSDK_PYTHON=/opt/circleci/.pyenv/shims/python3
-            #pyenv install 3.9.9
-            #pyenv global 3.9.9
-            which python
-            export CLOUDSDK_PYTHON=/opt/circleci/.pyenv/shims/python
-
-
       - checkout
-      - gcp-cli/install:
-          environment: 
-            CLOUDSDK_PYTHON: /opt/circleci/.pyenv/shims/python
       - gcp-cli/initialize:
           gcloud-service-key: GCLOUD_SERVICE_KEY
           google-compute-region: AUSTRALIA_REGION
