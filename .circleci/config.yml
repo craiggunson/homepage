@@ -18,6 +18,8 @@ jobs:
           name: check python
           command: |
             python3 --version
+            which python3
+            export CLOUDSDK_PYTHON=/usr/bin/python3
       - checkout
       - gcp-cli/install
       - gcp-cli/initialize:
@@ -51,7 +53,6 @@ workflows:
   avocado-workflow:
     jobs:
       - avocado:
-          executor: gcp-cli/google
       - production:
           requires:
             - avocado
