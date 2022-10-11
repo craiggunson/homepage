@@ -9,9 +9,15 @@ jobs:
   avocado:
     machine:
       image: ubuntu-2204:2022.07.1
+    resource_class: large
+
     #docker:
     #  - image: cimg/node:18.7.0
     steps:
+      - run:
+          name: check python
+          command: |
+            python3 --version
       - checkout
       - gcp-cli/install
       - gcp-cli/initialize:
@@ -23,7 +29,6 @@ jobs:
       - run:
           name: configure kubectl
           command: |
-            python3 --version
             gcloud components install kubectl kustomize gke-gcloud-auth-plugin --quiet
             kubectl version --client
             gcloud version
