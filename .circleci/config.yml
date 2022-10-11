@@ -23,12 +23,13 @@ jobs:
       - run:
           name: configure kubectl
           command: |
+            python3 --version
             gcloud components install kubectl kustomize gke-gcloud-auth-plugin --quiet
             kubectl version --client
             gcloud version
             node --version
             npm --version
-            python3 --version
+
 
   production:
     docker:
