@@ -50,7 +50,7 @@ jobs:
 workflows:
   avocado-workflow:
     jobs:
-      - avocado
+      - avocado:
           executor: gcp-cli/google
       - production:
           requires:
