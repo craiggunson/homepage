@@ -20,7 +20,9 @@ jobs:
             python3 --version
             which python3
             export CLOUDSDK_PYTHON=/opt/circleci/.pyenv/shims/python3
-            pyenv which python3
+            pyenv global 3.10.5
+
+
       - checkout
       - gcp-cli/install
       - gcp-cli/initialize:
