@@ -52,7 +52,7 @@ jobs:
 workflows:
   avocado-workflow:
     jobs:
-      - avocado:
+      - avocado
       - production:
           requires:
             - avocado
