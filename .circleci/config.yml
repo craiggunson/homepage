@@ -7,8 +7,10 @@ orbs:
 
 jobs:
   avocado:
-    docker:
-      - image: cimg/node:18.7.0
+    machine:
+      image: ubuntu-2204:2022.07.1
+    #docker:
+    #  - image: cimg/node:18.7.0
     steps:
       - checkout
       - gcp-cli/install
@@ -26,6 +28,7 @@ jobs:
             gcloud version
             node --version
             npm --version
+            python3 --version
 
   production:
     docker:
