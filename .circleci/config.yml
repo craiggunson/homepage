@@ -8,7 +8,7 @@ orbs:
 jobs:
   avocado:
     machine:
-      image: ubuntu-2204:2022.07.1
+      image: ubuntu-2204:2022.04.1
     resource_class: large
 
     #docker:
