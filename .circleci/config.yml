@@ -22,7 +22,8 @@ jobs:
             #export CLOUDSDK_PYTHON=/opt/circleci/.pyenv/shims/python3
             #pyenv install 3.9.9
             #pyenv global 3.9.9
-            export CLOUDSDK_PYTHON=/usr/bin/python
+            which python
+            export CLOUDSDK_PYTHON=/opt/circleci/.pyenv/shims/python
 
 
       - checkout
