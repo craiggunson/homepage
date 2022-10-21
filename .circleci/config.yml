@@ -7,11 +7,14 @@ orbs:
 
 jobs:
   avocado:
-    docker:
-      - image: cimg/node:18.7.0
+    machine:
+      image: ubuntu-2204:2022.07.1
+    resource_class: large
+
+    #docker:
+    #  - image: cimg/node:18.7.0
     steps:
       - checkout
-      - gcp-cli/install
       - gcp-cli/initialize:
           gcloud-service-key: GCLOUD_SERVICE_KEY
           google-compute-region: AUSTRALIA_REGION
@@ -26,6 +29,7 @@ jobs:
             gcloud version
             node --version
             npm --version
+
 
   production:
     docker:
