@@ -15,9 +15,9 @@
 
 <style>
 .button {
-  border-radius: 12px;
+  border-radius: 10%;
   border: none;
-  color: white;
+  color: black;
   padding: 20px;
   text-align: center;
   text-decoration: none;
@@ -27,23 +27,42 @@
   cursor: pointer;
 }
 
-.button1 {background-color: green;}
-.button2 {background-color: greenyellow;}
-.button3 {background-color: orange;}
+.button1 {background-color: green}
+.button2 {background-color:greenyellow;}
+.button3 {background-color:orange;}
 .button4 {background-color: red;}
 .button5 {background-color: purple;}
+
+h2 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 3em;
+    }
+p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 2em;
+    }
+
 </style>
 </head>
 <body>
 
-<h2>Choose Wisely</h2>
-<p>Pick a a fruit, analytics test.</p>
+<h2>Fave Fruit</h2>
+<p>Pick any fruit for some analytics.</p>
 
-<button class="button button1">Apple</button>
-<button class="button button2">Rock Mellon</button>
-<button class="button button3">Orange</button>
-<button class="button button4">Strawberry</button>
-<button class="button button5">Grapes</button>
+<button onclick="myFunction()" class="button button1">Apple</button>
+<button onclick="myFunction()" class="button button2">Mellon</button>
+<button onclick="myFunction()" class="button button3">Orange</button>
+<button onclick="myFunction()" class="button button4">Strawberry</button>
+<button onclick="myFunction()" class="button button5">Grape</button>
 
+<p id="demo"></p>
+
+<script>
+  var n = 0
+  function myFunction() {
+    n = n + 1 
+    document.getElementById("demo").innerHTML = "A button was clicked "+n+" times";
+  }
+  </script>
 </body>
 </html>
