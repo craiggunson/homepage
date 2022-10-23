@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BCSNWK2P2N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BCSNWK2P2N');
+</script>
+
+<style>
+
+body {
+  width: 100vw;
+  height:100vh;
+  color: dimgray;
+  padding: 1em;
+  margin: auto;
+  text-align: center;
+  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+
+}
+.button {
+  border-radius: 10%;
+  border: none;
+  color: whitesmoke;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+ 
+.button1 {background-color: green
+}
+
+h2 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 3em;
+    }
+p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 2em;
+    }
+
+</style>
+</head>
+<body>
+
+<h2>Fruit Basket</h2>
+<p>Pick any fruit?</p>
+<img src="mango.png" width="100" onclick="myFunction('mango')">
+<img src="pineapple.png" width="100" onclick="myFunction('pineapple')">
+<img src="pear.png" width="100" onclick="myFunction('pear')">
+<img src="grapes.png" width="100" onclick="myFunction('grapes')">
+
+<p id="demo"></p>
+<button onclick="myFunctionBuy()" id="checkout" class="button button1">Checkout</button>
+<script>
+  var n = 0
+  var picked = null
+  var mango = 0
+  var pineapple = 0
+  var pear = 0
+  var grapes = 0 
+  cart = {}
+  function myFunction(picked) {
+    n = n + 1 
+    if (picked == 'mango') {mango=mango+1}
+    if (picked == 'pineapple') {pineapple=pineapple+1}
+    if (picked == 'pear') {pear=pear+1}
+    if (picked == 'grapes') {grapes=grapes+1}
+
+    cart={mango: mango,
+         pineapple: pineapple,
+        pear: pear,
+        grapes: grapes,
+        checkout: false}
+    console.log(cart)
+    document.getElementById("demo").innerHTML = JSON.stringify(cart, null, 2);
+
+
+  }
+
+  function myFunctionBuy(cart) {
+    cart = {mango: mango,
+         pineapple: pineapple,
+        pear: pear,
+        grapes: grapes,
+        checkout: true}
+        document.getElementById("demo").innerHTML = JSON.stringify(cart);
+
+      console.log(cart)  
+  }
+  </script>
+</body>
+</html>
