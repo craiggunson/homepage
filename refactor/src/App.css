@@ -62,7 +62,7 @@ html {
   flex-direction: column;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: crimson;
+  background-color: rgba(201, 32, 32, 0.5);
 }
 .icon-block {
   padding: 0 2vw;
