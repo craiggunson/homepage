@@ -10,8 +10,7 @@ function App() {
     var wh;
     var ww;
     var y;
-    var size;
-    var x;
+ 
     var altitude;
     
     function coinFlip() {
@@ -26,7 +25,7 @@ function App() {
       for (var x = 0; x < ww + 50; x = x + 30 + (Math.random() * 10)) {
         choose = coinFlip();
         altitude = Math.floor(Math.random() * 25)
-        if (choose == 0) {
+        if (choose === 0) {
           y = y - altitude;
         } else {
           y = y + altitude;
@@ -47,7 +46,8 @@ function App() {
     window.onorientationchange = function () {
       var orientation = window.orientation;
       switch (orientation) {
-        case 0:
+        default: 
+          case 0:
         case 90:
         case -90:
           window.location.reload();
@@ -82,16 +82,16 @@ function App() {
     function render() {
     
       y = wh / 3;
-      size = 20
+
       ctx.fillStyle = "rgba(200, 50, 50, 1)";
       draw();
     
-      size = 35
+  
       y = wh / 2;
       ctx.fillStyle = "rgba(140, 20, 40, 1)";
       draw();
     
-      size = 50
+   
       y = wh - (wh / 3);
       ctx.fillStyle = "rgba(80, 10, 40, 1)";
       draw();
@@ -111,10 +111,10 @@ function App() {
     
         }
     
-        for (var ang = .1; ang <= 2; ang = ang + .2) {
+        for (var angover = .1; angover <= 2; angover = angover + .2) {
           ctx.beginPath();
           ctx.lineTo(sunplace, sunheight);
-          ctx.arc(sunplace, sunheight, wh / 20, ang * Math.PI, (ang + .1) * Math.PI);
+          ctx.arc(sunplace, sunheight, wh / 20, angover * Math.PI, (angover + .1) * Math.PI);
           ctx.lineTo(sunplace, sunheight);
           ctx.fillStyle = "rgba(255,255,255,.05)";
           ctx.fill();
