@@ -2,7 +2,7 @@ import './App.css';
 import React from "react";
 
 function App() {
-var ctx;
+
   return (
     <div className="App">
   <canvas id="canvas" className='background' width="500" height="500" > </canvas>

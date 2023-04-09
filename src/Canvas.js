@@ -4,7 +4,6 @@ function Canvas() {
     React.useEffect(() => {
       var choose = 0;
       var maxy = 1000;
-      var canvas;
       var ctx;
       var wh;
       var ww;
