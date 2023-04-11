@@ -23,9 +23,10 @@ jobs:
           
     - name: Build and Test.
       run: |
-        npm install
-        npm run test
-        npm run build
+        npm install pnpm -g
+        pnpm install --frozen-lockfile
+        pnpm run test
+        pnpm run build
 
     - name: Copy to dev.craiggunson.com bucket.
       run: |
