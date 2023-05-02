@@ -62,8 +62,13 @@ html {
   flex-direction: column;
   background-repeat: no-repeat;
   background-size: cover;
+  
   /* background-color: rgba(201, 32, 32, 0.5); */ 
 }
+body::-webkit-scrollbar{
+  display: none;
+}
+
 .icon-block {
   padding: 0 2vw;
 }
