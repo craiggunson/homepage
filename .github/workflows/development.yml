@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v2
@@ -23,9 +23,10 @@ jobs:
           
     - name: Build and Test.
       run: |
-        npm install
-        npm run test
-        npm run build
+        npm install pnpm -g
+        pnpm install
+        pnpm run test
+        pnpm run build
 
     - name: Copy to dev.craiggunson.com bucket.
       run: |
