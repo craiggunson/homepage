@@ -24,7 +24,7 @@ function App() {
         <div className="row">
           <div className="col s12 m4">
             <div className="icon-block">
-              <h2 className="center white-text"><i className="fas fa-cloud fa-2x"></i></h2>
+              <h2 className="center white-text"><i className="fa-solid fa-cloud fa-2x"></i></h2>
               <h5 className="center">Cloud Tradie</h5>
 
               <p className="center light white-text">Delivering value with cloud technology to enable customer
@@ -34,7 +34,7 @@ function App() {
 
           <div className="col s12 m4">
             <div className="icon-block">
-              <h2 className="center white-text"><i className="fas fa-wrench fa-2x"></i></h2>
+              <h2 className="center white-text"><i className="fa-solid fa-wrench fa-2x"></i></h2>
               <h5 className="center">Engineer</h5>
 
               <p className="center light white-text">Curious how things work, comfortable hands on. Keeping it simple &
@@ -44,7 +44,7 @@ function App() {
 
           <div className="col s12 m4">
             <div className="icon-block">
-              <h2 className="center white-text"><i className="fas fa-code fa-2x"></i></h2>
+              <h2 className="center white-text"><i className="fa-solid fa-code fa-3x"></i></h2>
               <h5 className="center">Innovator</h5>
 
               <p className="center light white-text">Infrastructure or code, frontend or backend.  Like to muck with UI/UX & data visualization.</p>
@@ -69,12 +69,12 @@ function App() {
 
         <div className="col l3 s12">
           <h5><br/> Projects</h5>
-          <a href="https://kitesurf.craiggunson.com"><img style={{height: '1em'}} src='pineapple.png' alt="pineapple"/> Serverless Kite Surfing</a><br/>
+          <a href="https://kitesurf.craiggunson.com"> <projecticon id="pineapple"  >🍍</projecticon>  Serverless Kite Surfing</a><br/>
           <a href="https://tidebubble.craiggunson.com"><img style={{height:'1em'}} src='droplet.png' alt="droplet"/> Serverless High Tide</a><br/>
           <a href="https://github.com/craiggunson/weather-pi"><img style={{height: '1em'}} src='pi.png' alt="pi"/> IoT Pi Weather</a><br/>
-          <a href="https://github.com/craiggunson/mizaru"><img style={{height: '1em'}} src='pear.png' alt="pear"/> AI Emotion detection</a><br/>
+          <a href="https://github.com/craiggunson/mizaru"><img style={{height: '1em'}} src='pear.svg' alt="pear"/> AI Emotion detection</a><br/>
           <a href="https://github.com/craiggunson/sweet-n-sour"><img style={{height:'1em'}} src='sour.png' alt="sour"/> GraphQL Sweet-n-Sour</a><br/>
-          <a href="https://shopcart.craiggunson.com"><img style={{height:'1em'}} src='box.png' alt="box"/>Fruit Cart GA4</a><br/>
+          <a href="https://shopcart.craiggunson.com"><img style={{height:'1em'}} src='box.svg' alt="box"/>Fruit Cart GA4</a><br/>
         </div>
 
         <div className="col l3 s12">
@@ -82,6 +82,7 @@ function App() {
           <a href="https://github.com/craiggunson"><i className="fab fa-github fa-3x" title="Github"></i></a>
           <a href="https://www.linkedin.com/in/craiggunson/"><i className="fab fa-linkedin-in fa-3x" title="Linkedin"></i></a>
           <a href="https://www.imdb.com/name/nm6043920/"><i className="fab fa-imdb fa-3x" title="IMDB"></i></a>
+          <a href="https://www.instagram.com/beachcroozer/"><i className="fab fa-instagram fa-3x" title="Instagram"></i></a>
 
         </div>
       </div>
