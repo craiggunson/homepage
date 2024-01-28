@@ -106,13 +106,13 @@ i {
 .page-footer {
   text-align: center;
   padding-top: 1vh;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .page-footer .footer-copyright {
   min-height: 5vh;
   text-align: center;
   padding: 1vw 1vh;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .center {
   text-align: center;
