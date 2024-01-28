@@ -69,12 +69,12 @@ function App() {
 
         <div className="col l3 s12">
           <h4><br/> Projects</h4>
-          <a href="https://kitesurf.craiggunson.com"> <projecticon>🍍</projecticon>  Serverless Kite Surfing</a><br/>
-          <a href="https://tidebubble.craiggunson.com"><projecticon>💧</projecticon> Serverless High Tide</a><br/>
-          <a href="https://github.com/craiggunson/weather-pi"><projecticon>🥧</projecticon> IoT Pi Weather</a><br/>
-          <a href="https://github.com/craiggunson/mizaru"><projecticon>🙈</projecticon> AI Emotion detection</a><br/>
-          <a href="https://github.com/craiggunson/sweet-n-sour"><projecticon>😝</projecticon> GraphQL Sweet-n-Sour</a><br/>
-          <a href="https://shopcart.craiggunson.com"><projecticon>📦</projecticon>Fruit Cart GA4</a><br/>
+          <a href="https://kitesurf.craiggunson.com"> <b className="projecticon">🍍</b>Serverless Kite Surfing</a><br/>
+          <a href="https://tidebubble.craiggunson.com"><b className="projecticon">💧</b> Serverless High Tide</a><br/>
+          <a href="https://github.com/craiggunson/weather-pi"><b className="projecticon">🥧</b> IoT Pi Weather</a><br/>
+          <a href="https://github.com/craiggunson/mizaru"><b className="projecticon">🙈</b> AI Emotion detection</a><br/>
+          <a href="https://github.com/craiggunson/sweet-n-sour"><b className="projecticon">😝</b> GraphQL Sweet-n-Sour</a><br/>
+          <a href="https://shopcart.craiggunson.com"><b className="projecticon">📦</b>Fruit Cart GA4</a><br/>
         </div>
 
         <div className="col l3 s12">

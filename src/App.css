@@ -209,7 +209,7 @@ h5 {
   font-weight: 401;
 }
 
-projecticon {
+.projecticon {
   user-select: none; /* standard */
   -moz-user-select: none; /* firefox specific */
   -webkit-user-select: none; /* Chrome, Opera and Safari*/
