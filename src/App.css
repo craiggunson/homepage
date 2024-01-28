@@ -56,7 +56,7 @@ html {
   font-family: Lato, sans-serif;
   font-weight: 400;
   font-size: 3vh;
-  color: rgba(239, 239, 239, 0.6);
+  color: white;
   display: block;
   min-height: 100vh;
   flex-direction: column;
@@ -73,7 +73,7 @@ body::-webkit-scrollbar{
   padding: 0 2vw;
 }
 h1 {
-  color: rgba(255, 255, 255, 0.9);
+  color: white;
   text-align: center;
   line-height: 1.1;
   padding: 0;
@@ -87,7 +87,7 @@ h1 {
   z-index: -1;
 }
 .white-text {
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
 }
 footer {
   display: block;
@@ -95,7 +95,7 @@ footer {
 }
 a {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
 }
 a {
   text-decoration: none;
@@ -199,162 +199,26 @@ h5 {
   text-align: center;
   padding-bottom: 5vh;
 }
-.fa,
-.fab,
-.fas {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-}
-.fa-1x {
-  font-size: 1em;
-}
-.fa-2x {
-  font-size: 2em;
-}
-.fa-3x {
-  font-size: 3em;
-}
-.fa-4x {
-  font-size: 4em;
-}
-.fa-5x {
-  font-size: 5em;
-}
-.fa-6x {
-  font-size: 6em;
-}
-.fa-7x {
-  font-size: 7em;
-}
-.fa-8x {
-  font-size: 8em;
-}
-.fa-9x {
-  font-size: 9em;
-}
-.fa-10x {
-  font-size: 10em;
-}
-@-webkit-keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-.fa-apple:before {
-  content: "\f179";
-}
-.fa-aws:before {
-  content: "\f375";
-}
-.fa-box:before {
-  content: "\f466";
-}
-.fa-cloud:before {
-  content: "\f0c2";
-}
-.fa-code:before {
-  content: "\f121";
-}
-.fa-copyright:before {
-  content: "\f1f9";
-}
-.fa-css3:before {
-  content: "\f13c";
-}
-.fa-github:before {
-  content: "\f09b";
-}
-.fa-google:before {
-  content: "\f1a0";
-}
-.fa-hands:before {
-  content: "\f4c2";
-}
-.fa-home:before {
-  content: "\f015";
-}
-.fa-html5:before {
-  content: "\f13b";
-}
-.fa-imdb:before {
-  content: "\f2d8";
-}
-.fa-js:before {
-  content: "\f3b8";
-}
-.fa-link:before {
-  content: "\f0c1";
-}
-.fa-linkedin:before {
-  content: "\f08c";
-}
-.fa-linkedin-in:before {
-  content: "\f0e1";
-}
-.fa-mobile:before {
-  content: "\f10b";
-}
-.fa-page4:before {
-  content: "\f3d7";
-}
-.fa-tag:before {
-  content: "\f02b";
-}
-.fa-text-height:before {
-  content: "\f034";
-}
-.fa-text-width:before {
-  content: "\f035";
-}
-.fa-wrench:before {
-  content: "\f0ad";
-}
+
+@import url("all.css");
+
 @font-face {
-  font-family: "Font Awesome 5 Brands";
-  font-style: normal;
-  font-weight: 400;
-  font-display: auto;
-  src: url(../public/fa-brands-400.ttf);
+
+  font-family: someicons;
+  src: url(../public/NotoEmoji-VariableFont_wght.ttf);
+  font-weight: 401;
 }
-.fab {
-  font-family: "Font Awesome 5 Brands";
-}
-@font-face {
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
-  font-weight: 400;
-  font-display: auto;
-  src: url(../public/fa-regular-400.ttf);
-}
-@font-face {
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
-  font-weight: 900;
-  font-display: auto;
-  src: url(../public/fa-solid-900.ttf);
-}
-.fa,
-.fas {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-}
+
+projecticon {
+  user-select: none; /* standard */
+  -moz-user-select: none; /* firefox specific */
+  -webkit-user-select: none; /* Chrome, Opera and Safari*/
+    font-size: 1em;
+    font-family: someicons;
+    font-weight: 401;
+    cursor: pointer;
+    color: white;
+
+
+  }
+
