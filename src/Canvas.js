@@ -103,7 +103,7 @@ function Canvas() {
             ctx.lineTo(sunplace, sunheight);
             ctx.arc(sunplace, sunheight, 9000, ang * Math.PI, (ang + .1) * Math.PI);
             ctx.lineTo(sunplace, sunheight);
-            ctx.fillStyle = "rgba(255,255,255,.05)";
+            ctx.fillStyle = "rgba(255,255,255,.07)";
             ctx.fill();
             ctx.closePath();
       

@@ -56,7 +56,7 @@ html {
   font-family: Lato, sans-serif;
   font-weight: 400;
   font-size: 3vh;
-  color: rgba(239, 239, 239, 0.6);
+  color: white;
   display: block;
   min-height: 100vh;
   flex-direction: column;
@@ -73,7 +73,7 @@ body::-webkit-scrollbar{
   padding: 0 2vw;
 }
 h1 {
-  color: rgba(255, 255, 255, 0.9);
+  color: white;
   text-align: center;
   line-height: 1.1;
   padding: 0;
@@ -87,7 +87,7 @@ h1 {
   z-index: -1;
 }
 .white-text {
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
 }
 footer {
   display: block;
@@ -95,7 +95,7 @@ footer {
 }
 a {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
 }
 a {
   text-decoration: none;
@@ -217,9 +217,8 @@ projecticon {
     font-family: someicons;
     font-weight: 401;
     cursor: pointer;
-    color: #fcd9ff;
-    text-shadow: 0 0 0 transparent, 0 0 10px #9ec828,
-      0 0 20px rgba(169, 171, 40, 0.5);
+    color: white;
+
 
   }
 
