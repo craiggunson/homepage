@@ -14,7 +14,7 @@ function App() {
         
         <h1 className="header center">Craig Gunson</h1>
         <div className="row center">
-          <h3 className="header col s12 light">Doing what I can, with what I have, where I am.</h3>
+          <h2 className="header col s12 light">Doing what I can, with what I have, where I am.</h2>
         </div>
         
       </div>
@@ -25,7 +25,7 @@ function App() {
           <div className="col s12 m4">
             <div className="icon-block">
               <h2 className="center white-text"><i className="fa-solid fa-cloud-bolt fa-2x"></i></h2>
-              <h5 className="center">Cloud Tradie</h5>
+              <h4 className="center">Cloud Tradie</h4>
 
               <p className="center light white-text">Delivering value with cloud technology to enable customer
                 success. DevOps, Coaching, design, build on AWS or GCP.</p>
@@ -35,7 +35,7 @@ function App() {
           <div className="col s12 m4">
             <div className="icon-block">
               <h2 className="center white-text"><i className="fa-solid fa-tree fa-2x"></i></h2>
-              <h5 className="center">Engineer</h5>
+              <h4 className="center">Engineer</h4>
 
               <p className="center light white-text">Curious how things work, comfortable hands on. Keeping it simple &
                 sustainable. </p>
@@ -45,7 +45,7 @@ function App() {
           <div className="col s12 m4">
             <div className="icon-block">
               <h2 className="center white-text"><i className="fa-solid fa-seedling fa-2x"></i></h2>
-              <h5 className="center">Innovator</h5>
+              <h4 className="center">Innovator</h4>
 
               <p className="center light white-text">Infrastructure or code, frontend or backend.  Like to muck with UI/UX & data visualization.</p>
             </div>
