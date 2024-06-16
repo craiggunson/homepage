@@ -61,9 +61,9 @@ function App() {
       <div className="row">
         <div className="col l6 s12">
           <h4>Bio</h4>
-          <p className="white-text">Raised in New Zealand, now home is the Mornington Peninsula.  I am passionate
+          <p className="white-text">Home is the Mornington Peninsula.  I am passionate
             about technology and making it work for people. I spend my weekends outdoors, and weekdays on the computer. 
-              If you have a technology problem you need solved, say <a href = "mailto: hello@craiggunson.com"><u>hello@craiggunson.com</u></a> </p>
+              If you have a technology problem you need solved, say hello.</p>
 
         </div>
 
