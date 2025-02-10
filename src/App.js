@@ -13,7 +13,8 @@ function App() {
         
         <h1 className="header center">Craig Gunson</h1>
         <div className="row center">
-          <h2 className="header col s12 light">Doing what I can, with what I have, where I am.</h2>
+          <h2 className="header col s12 light">Doing what I can, with what I have, where I am.<br/>
+          What stands in the way becomes the way</h2>
         </div>
         
       </div>
