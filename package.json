@@ -4,11 +4,11 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "6.6.3",
-    "@testing-library/react": "16.0.1",
-    "@testing-library/user-event": "14.5.2",
+    "@testing-library/react": "16.2.0",
+    "@testing-library/user-event": "14.6.1",
     "css-select": "5.1.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-scripts": "5.0.1",
     "svgo": "3.3.2",
     "web-vitals": "4.2.4"
@@ -39,7 +39,7 @@
     ]
   },
   "devDependencies": {
-    "@playwright/test": "^1.48.2",
-    "@types/node": "^22.9.0"
+    "@playwright/test": "^1.51.0",
+    "@types/node": "^22.13.10"
   }
 }
