@@ -1,36 +1,32 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Basic Page Tests', () => {
+test.describe('Homepage Content Tests', () => {
+  let page;
 
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({ page: pageFixture }) => {
     // Navigate to the page before each test
+    page = pageFixture;
     await page.goto('http://dev.craiggunson.com');
   });
 
-  test('should load the page with the correct title', async ({ page }) => {
-    // Check if the page title is correct
+  test('should have correct page title', async () => {
     await expect(page).toHaveTitle(/Craig Gunson/);
   });
 
-  test('should contain Cloud Tradie text', async ({ page }) => {
-    await page.goto('http://dev.craiggunson.com');
-  
-    const textLocator = await page.locator('text=Cloud Tradie');
-    await expect(textLocator).toBeVisible();
+  test.describe('should display professional titles', () => {
+    const titles = ['Cloud Tradie', 'Engineer', 'Innovator'];
+    
+    for (const title of titles) {
+      test(`displays "${title}" text`, async () => {
+        const textLocator = page.getByText(title, { exact: true });
+        await expect(textLocator).toBeVisible();
+      });
+    }
   });
 
-  test('should contain Engineer text', async ({ page }) => {
-    await page.goto('http://dev.craiggunson.com');
+  // Add more test groups as needed
   
-    const textLocator = await page.locator('text=Engineer');
-    await expect(textLocator).toBeVisible();
+  test.afterEach(async () => {
+    // Clean up or verification steps after each test if needed
   });
-
-  test('should contain Innovator text', async ({ page }) => {
-    await page.goto('http://dev.craiggunson.com');
-  
-    const textLocator = await page.locator('text=Innovator');
-    await expect(textLocator).toBeVisible();
-  });
-
 });
