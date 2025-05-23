@@ -47,11 +47,11 @@ jobs:
         pnpm run test
         pnpm run build
         echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-        echo "The output of restore was: ${{ steps.restore.outputs.cache-hit }}"
+        echo "The output of restore was: ${{ fromJSON(steps.restore.outputs.cache-hit) }}"
 
     - name: save cache
       id: save
-      if: ${{ steps.restore.outputs.cache-hit }} != 'true'  
+      if: fromJSON(steps.restore.outputs.cache-hit) != 'true'  
       uses: actions/cache/save@v4
       with:
         path: ${{ env.STORE_PATH }}
