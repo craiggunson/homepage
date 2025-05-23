@@ -32,8 +32,9 @@ jobs:
       run: |
         echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-    - uses: actions/cache@v4
-      name: Setup pnpm cache
+    - uses: actions/cache/restore@v4
+      name: Restore Cache
+      id: restore
       with:
         path: ${{ env.STORE_PATH }}
         key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -45,6 +46,15 @@ jobs:
         pnpm install
         pnpm run test
         pnpm run build
+        echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+    - uses: actions/cache/save@v4
+      if: steps.restore.outputs.cache-hit != true
+      name: Save Cache
+      with:
+        path: ${{ env.STORE_PATH }}
+        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+      
 
     - name: Copy to dev.craiggunson.com bucket.
       run: |
