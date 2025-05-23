@@ -47,6 +47,7 @@ jobs:
         pnpm run test
         pnpm run build
         echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+        run: echo "The output of restore was: ${{ steps.restore.outputs.cache-hit.value }}"
 
     - name: save cache
       id: save
