@@ -82,7 +82,7 @@ function App() {
           <a href="https://github.com/craiggunson"><i className="fab fa-github fa-3x" title="Github"></i></a>
           <a href="https://www.linkedin.com/in/craiggunson/"><i className="fab fa-linkedin-in fa-3x" title="Linkedin"></i></a>
           <a href="https://www.imdb.com/name/nm6043920/"><i className="fab fa-imdb fa-3x" title="IMDB"></i></a>
-          <a href="https://open.spotify.com/user/31tkycrcyjrrljret3dtizbfkpyq?si=spFGBexyTQCnZrrKP4nrog"><i className="fab fa-spotify fa-3x" title="Spotify"></i></a>
+          <a href="https://open.spotify.com/user/31tkycrcyjrrljret3dtizbfkpyq?si=spFGBexyTQCnZrrKP4nrog"><i className="fa-brands fa-spotify fa-3x" title="Spotify"></i></a>
         </div>
       </div>
     </div>
