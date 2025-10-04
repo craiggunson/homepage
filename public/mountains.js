@@ -65,8 +65,8 @@ function init() {
   ctx.canvas.height = wh;
   //console.log('windowsize', ww, wh);
   var my_gradient = ctx.createLinearGradient(0, 0, 0, wh / 2);
-  my_gradient.addColorStop(0, "rgba(200, 100, 50, 1)");
-  my_gradient.addColorStop(1, "rgba(250, 200, 100, 1)");
+  my_gradient.addColorStop(0, "rgba(18, 122, 207, 1)");
+  my_gradient.addColorStop(1, "rgba(45, 16, 125, 1)");
   ctx.fillStyle = my_gradient;
   ctx.fillRect(0, 0, ww, wh);
   render();
@@ -78,17 +78,17 @@ function render() {
 
   y = wh / 3;
   size = 20
-  ctx.fillStyle = "rgba(200, 50, 50, 1)";
+  ctx.fillStyle = "rgba(107, 200, 50, 1)";
   draw();
 
   size = 35
   y = wh / 2;
-  ctx.fillStyle = "rgba(140, 20, 40, 1)";
+  ctx.fillStyle = "rgba(20, 140, 42, 1)";
   draw();
 
   size = 50
   y = wh - (wh / 3);
-  ctx.fillStyle = "rgba(80, 10, 40, 1)";
+  ctx.fillStyle = "rgba(10, 80, 14, 1)";
   draw();
 
   function sun() {
