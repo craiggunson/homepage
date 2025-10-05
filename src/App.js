@@ -24,8 +24,8 @@ function App() {
         <div className="row">
           <div className="col s12 m4">
             <div className="icon-block">
-              <h2 className="center white-text"><i className="fa-solid fa-cloud-bolt fa-2x"></i></h2>
-              <h3 className="center">Cloud Tradie</h3>
+              <h2 className="center white-text"><i class="fa-solid fa-cloud fa-2x"></i></h2>
+              <h3 className="center">Cloud</h3>
 
               <p className="center light white-text">Delivering value with cloud technology to enable customer
                 success. DevOps, Coaching, design, build on AWS or GCP.</p>
@@ -34,7 +34,7 @@ function App() {
 
           <div className="col s12 m4">
             <div className="icon-block">
-              <h2 className="center white-text"><i className="fa-solid fa-tree fa-2x"></i></h2>
+              <h2 className="center white-text"><i className="fa-solid fa-gear fa-2x"></i></h2>
               <h3 className="center">Engineer</h3>
 
               <p className="center light white-text">Curious how things work, comfortable hands on. Keeping it simple &
@@ -47,7 +47,7 @@ function App() {
               <h2 className="center white-text"><i className="fa-solid fa-seedling fa-2x"></i></h2>
               <h3 className="center">Innovator</h3>
 
-              <p className="center light white-text">Infrastructure or code, frontend or backend.  Like to muck with UI/UX & data visualization.</p>
+              <p className="center light white-text">Infrastructure or code, frontend or backend. A fan of good data visualization.</p>
             </div>
           </div>
         </div>
@@ -61,8 +61,7 @@ function App() {
       <div className="row">
         <div className="col l6 s12">
           <h4>Bio</h4>
-          <p className="white-text">Home is the Mornington Peninsula.  I am passionate
-            about technology and making it work for people. I spend my weekends outdoors, and weekdays on the computer. 
+          <p className="white-text">I am passionate about making technology work for people. <br /> I spend my weekends outdoors, and weekdays on the computer. <br />
               If you have a technology problem you need solved, say hello.</p>
 
         </div>
