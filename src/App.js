@@ -13,8 +13,7 @@ function App() {
         
         <h1 className="header center">Craig Gunson</h1>
         <div className="row center">
-          <h2 className="header col s12 light">Doing what I can, with what I have, where I am.<br/>
-          What stands in the way becomes the way</h2>
+          <h2 className="header col s12 light">Doing what I can, with what I have, where I am.</h2>
         </div>
         
       </div>
@@ -24,30 +23,29 @@ function App() {
         <div className="row">
           <div className="col s12 m4">
             <div className="icon-block">
-              <h2 className="center white-text"><i className="fa-solid fa-cloud-bolt fa-2x"></i></h2>
-              <h3 className="center">Cloud Tradie</h3>
+              <h2 className="center white-text"><i class="fa-solid fa-cloud fa-2x"></i></h2>
+              <h3 className="center">Cloud</h3>
 
-              <p className="center light white-text">Delivering value with cloud technology to enable customer
-                success. DevOps, Coaching, design, build on AWS or GCP.</p>
+              <p className="center light white-text">Years of experience with Amazon Web Services and Google Cloud Platform, catering to their strengths to deliver customer value.</p>
             </div>
           </div>
 
           <div className="col s12 m4">
             <div className="icon-block">
-              <h2 className="center white-text"><i className="fa-solid fa-tree fa-2x"></i></h2>
-              <h3 className="center">Engineer</h3>
+              <h2 className="center white-text"><i className="fa fa-github-alt fa-2x"></i></h2>
+              <h3 className="center">DevOps</h3>
 
-              <p className="center light white-text">Curious how things work, comfortable hands on. Keeping it simple &
-                sustainable. </p>
+              <p className="center light white-text">Brining software engineers, infrastructure, security and testing together, to more switftly deliver product.
+ </p>
             </div>
           </div>
 
           <div className="col s12 m4">
             <div className="icon-block">
-              <h2 className="center white-text"><i className="fa-solid fa-seedling fa-2x"></i></h2>
+              <h2 className="center white-text"><i className="fa-solid fa-check-circle fa-2x"></i></h2>
               <h3 className="center">Innovator</h3>
 
-              <p className="center light white-text">Infrastructure or code, frontend or backend.  Like to muck with UI/UX & data visualization.</p>
+              <p className="center light white-text">Moving at pace with Continuous Integration, Continuous Delivery, and Feedback.</p>
             </div>
           </div>
         </div>
@@ -61,8 +59,7 @@ function App() {
       <div className="row">
         <div className="col l6 s12">
           <h4>Bio</h4>
-          <p className="white-text">Home is the Mornington Peninsula.  I am passionate
-            about technology and making it work for people. I spend my weekends outdoors, and weekdays on the computer. 
+          <p className="white-text">I am passionate about making technology work for people. <br /> I spend my weekends outdoors, and weekdays on the computer. <br />
               If you have a technology problem you need solved, say hello.</p>
 
         </div>
@@ -82,7 +79,6 @@ function App() {
           <a href="https://github.com/craiggunson"><i className="fab fa-github fa-3x" title="Github"></i></a>
           <a href="https://www.linkedin.com/in/craiggunson/"><i className="fab fa-linkedin-in fa-3x" title="Linkedin"></i></a>
           <a href="https://www.imdb.com/name/nm6043920/"><i className="fab fa-imdb fa-3x" title="IMDB"></i></a>
-
         </div>
       </div>
     </div>

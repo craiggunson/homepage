@@ -1,136 +1,129 @@
 import React from "react";
 
 function Canvas() {
-    React.useEffect(() => {
-      var choose = 0;
-      var maxy = 1000;
-      var ctx;
-      var wh;
-      var ww;
-      var y;
-   
-      var altitude;
-      
-      function coinFlip() {
-        return Math.floor(Math.random() * 2);
+  React.useEffect(() => {
+    let ctx;
+    let wh;
+    let ww;
+    let maxy;
+
+    function rand(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    function buildMountainPoints(baseY, amplitude, step) {
+      const points = [];
+      let y = baseY;
+      let drift = 0;
+
+      for (let x = 0; x <= ww + step; x += step) {
+        // Gentle drift (low frequency) + local jitter (high frequency)
+        drift += rand(-amplitude * 0.2, amplitude * 0.2);
+        drift = Math.max(-amplitude, Math.min(amplitude, drift));
+
+        const local = rand(-amplitude * 0.3, amplitude * 0.3);
+        y = baseY + drift + local;
+
+        points.push({ x, y });
+        if (y < maxy) maxy = y;
       }
-      
-      
-      function draw() {
+      return points;
+    }
+
+    function drawSmoothMountain(baseY, color, options = {}) {
+      const {
+        amplitude = 80,
+        step = 20
+      } = options;
+
+      const pts = buildMountainPoints(baseY, amplitude, step);
+
+      ctx.beginPath();
+      ctx.moveTo(0, wh);
+      ctx.lineTo(pts[0].x, pts[0].y);
+
+      // Quadratic smoothing
+      for (let i = 0; i < pts.length - 1; i++) {
+        const p0 = pts[i];
+        const p1 = pts[i + 1];
+        const xc = (p0.x + p1.x) / 2;
+        const yc = (p0.y + p1.y) / 2;
+        ctx.quadraticCurveTo(p0.x, p0.y, xc, yc);
+      }
+
+      // Last point
+      const last = pts[pts.length - 1];
+      ctx.lineTo(last.x, last.y);
+      ctx.lineTo(ww, wh);
+      ctx.closePath();
+
+      ctx.fillStyle = color;
+      ctx.fill();
+    }
+
+    function init() {
+      window.addEventListener("resize", init, false);
+      const canvas = document.getElementById("canvas");
+      if (!canvas) return;
+      ctx = canvas.getContext("2d");
+      ww = window.innerWidth;
+      wh = window.innerHeight;
+      canvas.width = ww;
+      canvas.height = wh;
+
+      ctx.lineJoin = "round";
+      ctx.lineCap = "round";
+
+      // Sky gradient
+      const sky = ctx.createLinearGradient(0, 0, 0, wh * 0.5);
+      sky.addColorStop(0, "rgba(200, 100, 50, 1)");
+      sky.addColorStop(1, "rgba(250, 200, 100, 1)");
+      ctx.fillStyle = sky;
+      ctx.fillRect(0, 0, ww, wh);
+
+      render();
+    }
+
+    function sun(sunheight) {
+      const sunplace = ww * Math.random();
+      for (let ang = 0; ang <= 1.9; ang += 0.2) {
         ctx.beginPath();
-        ctx.moveTo(0, wh);
-      
-        for (var x = 0; x < ww + 50; x = x + 30 + (Math.random() * 10)) {
-          choose = coinFlip();
-          altitude = Math.floor(Math.random() * 25)
-          if (choose === 0) {
-            y = y - altitude;
-          } else {
-            y = y + altitude;
-      
-          }
-          if (y < maxy) {
-            maxy = y;
-          }
-          ctx.lineTo(x, y);
-          choose = coinFlip();
-      
-        }
-        ctx.lineTo(ww, wh);
+        ctx.lineTo(sunplace, sunheight);
+        ctx.arc(sunplace, sunheight, 9000, ang * Math.PI, (ang + 0.1) * Math.PI);
+        ctx.lineTo(sunplace, sunheight);
+        ctx.fillStyle = "rgba(255,255,255,.1)";
         ctx.fill();
-      
       }
-      
-      window.onorientationchange = function () {
-        var orientation = window.orientation;
-        switch (orientation) {
-          default: 
-            case 0:
-          case 90:
-          case -90:
-            window.location.reload();
-            break;
-        }
-      };
-      
-      
-      function init() {
-        window.addEventListener('resize', init, false);
-        window.addEventListener("orientationchange", function () {
-          window.location.reload();
-        });
-      
-        const canvas = document.getElementById('canvas');
-        ctx = canvas.getContext('2d');
-        wh = window.innerHeight;
-        ww = window.innerWidth;
-        ctx.canvas.width = ww;
-        ctx.canvas.height = wh;
-        //console.log('windowsize', ww, wh);
-        var my_gradient = ctx.createLinearGradient(0, 0, 0, wh / 2);
-        my_gradient.addColorStop(0, "rgba(200, 100, 50, 1)");
-        my_gradient.addColorStop(1, "rgba(250, 200, 100, 1)");
-        ctx.fillStyle = my_gradient;
-        ctx.fillRect(0, 0, ww, wh);
-        render();
+      for (let a = 0.1; a <= 2; a += 0.2) {
+        ctx.beginPath();
+        ctx.lineTo(sunplace, sunheight);
+        ctx.arc(sunplace, sunheight, wh / 20, a * Math.PI, (a + 0.1) * Math.PI);
+        ctx.lineTo(sunplace, sunheight);
+        ctx.fillStyle = "rgba(255,255,255,.1)";
+        ctx.fill();
       }
-      
-      init();
-      
-      function render() {
-      
-        y = wh / 3;
-  
-        ctx.fillStyle = "rgba(200, 50, 50, 1)";
-        draw();
-      
-    
-        y = wh / 2;
-        ctx.fillStyle = "rgba(140, 20, 40, 1)";
-        draw();
-      
-     
-        y = wh - (wh / 3);
-        ctx.fillStyle = "rgba(80, 10, 40, 1)";
-        draw();
-      
-        function sun() {
-          var sunplace = ww * Math.random()
-          var sunheight = maxy - wh / 40
-      
-          for (var ang = 0; ang <= 1.9; ang = ang + .2) {
-            ctx.beginPath();
-            ctx.lineTo(sunplace, sunheight);
-            ctx.arc(sunplace, sunheight, 9000, ang * Math.PI, (ang + .1) * Math.PI);
-            ctx.lineTo(sunplace, sunheight);
-            ctx.fillStyle = "rgba(255,255,255,.07)";
-            ctx.fill();
-            ctx.closePath();
-      
-          }
-      
-          for (var angover = .1; angover <= 2; angover = angover + .2) {
-            ctx.beginPath();
-            ctx.lineTo(sunplace, sunheight);
-            ctx.arc(sunplace, sunheight, wh / 20, angover * Math.PI, (angover + .1) * Math.PI);
-            ctx.lineTo(sunplace, sunheight);
-            ctx.fillStyle = "rgba(255,255,255,.05)";
-            ctx.fill();
-            ctx.closePath();
-          }
-      
-          ctx.beginPath();
-          ctx.arc(sunplace, sunheight, wh / 30, 0, 2 * Math.PI);
-          ctx.fillStyle = "rgba(255,255,255,.1)";
-          ctx.fill();
-          ctx.closePath();
-        }
-      
-        sun();
-      }
-    }, []);
-  
-    return ( <div className="Canvas"/> );
+      ctx.beginPath();
+      ctx.arc(sunplace, sunheight, wh / 30, 0, 2 * Math.PI);
+      ctx.fillStyle = "rgba(255,255,255,.1)";
+      ctx.fill();
+    }
+
+    function render() {
+      maxy = wh; // reset for sun placement ref
+      // Back (lighter) mountains
+      drawSmoothMountain(wh * 0.35, "rgba(200, 50, 50, 1)", { amplitude: wh * 0.12, step: 55 });
+      // Mid
+      drawSmoothMountain(wh * 0.55, "rgba(140, 20, 40, 1)", { amplitude: wh * 0.15, step: 50 });
+      // Front (darker)
+      drawSmoothMountain(wh * 0.75, "rgba(80, 10, 40, 1)", { amplitude: wh * 0.18, step: 45 });
+
+      sun(maxy - wh / 40);
+    }
+
+    init();
+  }, []);
+
+  return ;
 }
 
 export default Canvas;
