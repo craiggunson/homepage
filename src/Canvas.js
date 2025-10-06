@@ -76,8 +76,8 @@ function Canvas() {
 
       // Sky gradient
       const sky = ctx.createLinearGradient(0, 0, 0, wh * 0.5);
-      sky.addColorStop(0, "rgba(70, 161, 217, 1)");
-      sky.addColorStop(1, "rgba(100, 250, 240, 1)");
+      sky.addColorStop(0, "rgba(200, 100, 50, 1)");
+      sky.addColorStop(1, "rgba(250, 200, 100, 1)");
       ctx.fillStyle = sky;
       ctx.fillRect(0, 0, ww, wh);
 
@@ -111,11 +111,11 @@ function Canvas() {
     function render() {
       maxy = wh; // reset for sun placement ref
       // Back (lighter) mountains
-      drawSmoothMountain(wh * 0.35, "rgba(32, 165, 214, 1)", { amplitude: wh * 0.12, step: 55 });
+      drawSmoothMountain(wh * 0.35, "rgba(200, 50, 50, 1)", { amplitude: wh * 0.12, step: 55 });
       // Mid
-      drawSmoothMountain(wh * 0.55, "rgba(27, 139, 170, 1)", { amplitude: wh * 0.15, step: 50 });
+      drawSmoothMountain(wh * 0.55, "rgba(140, 20, 40, 1)", { amplitude: wh * 0.15, step: 50 });
       // Front (darker)
-      drawSmoothMountain(wh * 0.75, "rgba(17, 103, 121, 1)", { amplitude: wh * 0.18, step: 45 });
+      drawSmoothMountain(wh * 0.75, "rgba(80, 10, 40, 1)", { amplitude: wh * 0.18, step: 45 });
 
       sun(maxy - wh / 40);
     }
