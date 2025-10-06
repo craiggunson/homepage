@@ -26,18 +26,17 @@ function App() {
               <h2 className="center white-text"><i class="fa-solid fa-cloud fa-2x"></i></h2>
               <h3 className="center">Cloud</h3>
 
-              <p className="center light white-text">Delivering value with cloud technology to enable customer
-                success. DevOps, Coaching, design, build on AWS or GCP.</p>
+              <p className="center light white-text">Years of experience with Amazon Web Services and Google Cloud Platform, catering to their strengths to deliver customer value.</p>
             </div>
           </div>
 
           <div className="col s12 m4">
             <div className="icon-block">
               <h2 className="center white-text"><i className="fa-solid fa-gear fa-2x"></i></h2>
-              <h3 className="center">Engineer</h3>
+              <h3 className="center">DevOps</h3>
 
-              <p className="center light white-text">Curious how things work, comfortable hands on. Keeping it simple &
-                sustainable. </p>
+              <p className="center light white-text">Brining software engineering, infrastructure, security and testing together, to more switftly deliver product.
+ </p>
             </div>
           </div>
 
@@ -46,7 +45,7 @@ function App() {
               <h2 className="center white-text"><i className="fa-solid fa-seedling fa-2x"></i></h2>
               <h3 className="center">Innovator</h3>
 
-              <p className="center light white-text">Infrastructure or code, frontend or backend. A fan of good data visualization.</p>
+              <p className="center light white-text">Moving at pace with Continuous Integration, Continuous Delivery, and Feedback.</p>
             </div>
           </div>
         </div>
