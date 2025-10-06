@@ -35,7 +35,7 @@ function App() {
               <h2 className="center white-text"><i className="fa fa-github-alt fa-2x"></i></h2>
               <h3 className="center">DevOps</h3>
 
-              <p className="center light white-text">Brining software engineers, infrastructure, security and testing together, to more switftly deliver product.
+              <p className="center light white-text">Bringing software engineers, infrastructure, security and testing together, to swiftly deliver product.
  </p>
             </div>
           </div>
