@@ -45,7 +45,7 @@ function App() {
               <h2 className="center white-text"><i className="fa-solid fa-check-circle fa-2x"></i></h2>
               <h3 className="center">Innovator</h3>
 
-              <p className="center light white-text">Moving at pace with Continuous Integration, Continuous Delivery, and Feedback.</p>
+              <p className="center light white-text">Moving at pace with Continuous Integration, Continuous Delivery, and AI.</p>
             </div>
           </div>
         </div>
