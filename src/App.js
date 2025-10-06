@@ -32,7 +32,7 @@ function App() {
 
           <div className="col s12 m4">
             <div className="icon-block">
-              <h2 className="center white-text"><i className="fa fa-github-alt fa-2x" aria-hidden="true"></i></h2> 
+              <h2 className="center white-text"><i className="fa fa-github-alt fa-2x"></i></h2>
               <h3 className="center">DevOps</h3>
 
               <p className="center light white-text">Brining software engineering, infrastructure, security and testing together, to more switftly deliver product.
