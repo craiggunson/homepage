@@ -23,7 +23,7 @@ function App() {
         <div className="row">
           <div className="col s12 m4">
             <div className="icon-block">
-              <h2 className="center white-text"><i class="fa-solid fa-cloud fa-2x"></i></h2>
+              <h2 className="center white-text"><i class="fa-solid fa-cloud-bolt fa-2x"></i></h2>
               <h3 className="center">Cloud</h3>
 
               <p className="center light white-text">Years of experience with Amazon Web Services and Google Cloud Platform, catering to their strengths to deliver customer value.</p>
@@ -32,7 +32,7 @@ function App() {
 
           <div className="col s12 m4">
             <div className="icon-block">
-              <h2 className="center white-text"><i className="fa fa-github-alt fa-2x"></i></h2>
+              <h2 className="center white-text"><i className="fa-solid fa-code fa-2x"></i></h2>
               <h3 className="center">DevOps</h3>
 
               <p className="center light white-text">Bringing software engineers, infrastructure, security and testing together, to swiftly deliver product.
@@ -42,7 +42,7 @@ function App() {
 
           <div className="col s12 m4">
             <div className="icon-block">
-              <h2 className="center white-text"><i className="fa-solid fa-check-circle fa-2x"></i></h2>
+              <h2 className="center white-text"><i className="fa-solid fa-seedling fa-2x"></i></h2>
               <h3 className="center">Innovator</h3>
 
               <p className="center light white-text">Moving at pace with Continuous Integration, Continuous Delivery, and AI.</p>
