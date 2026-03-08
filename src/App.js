@@ -1,11 +1,11 @@
 import React from "react";
+import Canvas from "./Canvas";
 
 function App() {
 
   return (
     <div className="App">
-  <canvas id="canvas" className='background' width="500" height="500" > </canvas>
-
+<Canvas />
 
   <main>
     <div className="section no-pad-bot" id="index-banner">
