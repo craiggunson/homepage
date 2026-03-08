@@ -98,19 +98,19 @@ function Canvas() {
         back: {
           points: buildMountainPoints(wh * 0.35, wh * 0.12, 55, loopWidth),
           color: "rgba(200,50,50,1)",
-          speed: 0.5,  // Slowest (farthest away)
+          speed: 0.2,  // Slowest (farthest away)
           loopWidth: loopWidth
         },
         mid: {
           points: buildMountainPoints(wh * 0.55, wh * 0.15, 50, loopWidth),
           color: "rgba(140,20,40,1)",
-          speed: 1.2,  // Medium speed
+          speed: 0.5,  // Medium speed
           loopWidth: loopWidth
         },
         front: {
           points: buildMountainPoints(wh * 0.75, wh * 0.18, 45, loopWidth),
           color: "rgba(80,10,40,1)",
-          speed: 2.0,  // Fastest (closest)
+          speed: 0.9,  // Fastest (closest)
           loopWidth: loopWidth
         }
       };
