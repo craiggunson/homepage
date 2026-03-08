@@ -81,7 +81,18 @@ function Canvas() {
       const canvas = document.getElementById("canvas");
       console.log("Canvas element:", canvas);
       if (!canvas) return;
-      ctx = canvas.getContext("2d");
+
+      try {
+        ctx = canvas.getContext("2d");
+      } catch (error) {
+        // jsdom does not implement canvas APIs unless a canvas package is installed.
+        return;
+      }
+
+      if (!ctx) {
+        return;
+      }
+
       ww = window.innerWidth;
       wh = window.innerHeight;
       canvas.width = ww;
