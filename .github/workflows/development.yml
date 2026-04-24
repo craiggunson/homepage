@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
@@ -24,7 +24,7 @@ jobs:
         aws-region: ap-southeast-2
 
     - name: Install pnpm
-      uses: pnpm/action-setup@v4
+      uses: pnpm/action-setup@v6
       with:
         version: 8
         run_install: false
@@ -32,10 +32,10 @@ jobs:
     - name: Get pnpm store directory
       shell: bash
       run: |
-        exit 1. # fail this workflow on purpose to test the retry workflow
+        #exit 1. # fail this workflow on purpose to test the retry workflow
         echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-    - uses: actions/cache@v4
+    - uses: actions/cache@v5
       name: Setup pnpm cache
       with:
         path: ${{ env.STORE_PATH }}
