@@ -19,7 +19,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v6
 
-      
+
     - name: token
       shell: bash
       env:
@@ -27,7 +27,7 @@ jobs:
       run: |
         output=$(gh run view --repo "${{ github.event.repository.full_name }}" "${{ github.run_id }}")
         echo "$output"
-        gh workflow run dispatch.yml
+        gh workflow run dispatch.yml \
           --repo "${{ github.event.repository.full_name }}" \
           --ref "${{ github.ref_name }}"
 
