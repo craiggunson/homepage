@@ -1,0 +1,37 @@
+name: Hello Dispatch
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Who to greet'
+        required: true
+        default: 'world'
+        type: string
+      greeting:
+        description: 'Greeting to use'
+        required: false
+        default: 'hello'
+        type: choice
+        options:
+          - hello
+          - hi
+          - hey
+      shout:
+        description: 'Uppercase the output'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: |
+          MESSAGE="${{ inputs.greeting }}, ${{ inputs.name }}!"
+          if [ "${{ inputs.shout }}" = "true" ]; then
+            echo "${MESSAGE^^}"
+          else
+            echo "$MESSAGE"
+          fi

@@ -2,8 +2,9 @@ name: dev-static-website
 
 on:
   push:
-    branches-ignore:
-      - main
+    branches:
+      - 'notnow'
+      - '!main'
 
       
 jobs:
