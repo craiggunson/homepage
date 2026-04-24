@@ -1,0 +1,23 @@
+name: token
+
+on:
+  push:
+    branches:
+      - 'retry-check2'
+      
+jobs:
+  token:
+    name: token
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: token
+      shell: bash
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        output=$(gh run view --repo "${{ github.event.repository.full_name }}" "${{ github.run_id }}")
+        echo "$output"
