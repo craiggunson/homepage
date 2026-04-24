@@ -26,5 +26,7 @@ jobs:
       run: |
         output=$(gh run view --repo "${{ github.event.repository.full_name }}" "${{ github.run_id }}")
         echo "$output"
-        gh run rerun "${{ github.run_id }}" --repo "${{ github.event.repository.full_name }}"
+        gh workflow run dispatch.yml
+          --repo "${{ github.event.repository.full_name }}" \
+          --ref "${{ github.ref_name }}"
 
