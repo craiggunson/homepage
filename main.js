@@ -126,7 +126,7 @@
         var tree = mountainData.trees[i];
         var screenX = tree.x + copyOffset;
         if (screenX < -200 || screenX > ww + 200) continue;
-        var groundY = getMountainY(mountainData.front.points, tree.x);
+        var groundY = getMountainY(mountainData.front.points, tree.x) + wh * 0.025;
         drawPalmTree(screenX, groundY, tree.height, tree.lean);
       }
     }
